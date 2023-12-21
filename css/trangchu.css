@@ -1,0 +1,504 @@
+@font-face {
+    font-family: SVN-Futura;
+    src: url(font/SVN-Futura\ Regular.ttf);
+}         
+@font-face {
+    font-family: Taken by Vultures Alternates De;
+    src: url(font/Taken\ by\ Vultures\ Demo.otf);
+}          
+:root{
+    --color-main: #42210B;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: 'SVN-Futura', sans-serif;
+}
+
+
+.echbay-sms-messenger div.phonering-alo-zalo, 
+.echbay-sms-messenger div.phonering-alo-alo {
+	background-color:#0084ff
+}
+.echbay-sms-messenger div.phonering-alo-sms {
+	background-color:#f60
+}
+.echbay-sms-messenger div.phonering-alo-messenger {
+	background-color:#e60f1e
+}
+ 
+.echbay-sms-messenger {
+	width:45px
+}
+.echbay-sms-messenger a {
+	line-height:45px;
+    color: transparent;
+    display:block;
+}
+.echbay-sms-messenger {
+	display:block
+}
+.echbay-sms-messenger div.phonering-alo-zalo {
+	display: block
+}
+ 
+.echbay-sms-messenger div.phonering-alo-alo {
+    background-image: url(https://giuseart.com/wp-content/uploads/2022/11/call.png);
+}
+.echbay-sms-messenger div.phonering-alo-sms {
+    background-image: url(https://giuseart.com/wp-content/uploads/2022/11/mail.png);
+    background-color: #f60;
+    background-size: 60%;
+}
+.echbay-sms-messenger div.phonering-alo-zalo {
+    background-image: url(https://giuseart.com/wp-content/uploads/2022/11/zalo.png);
+}
+.echbay-sms-messenger div.phonering-alo-messenger {
+    background-image: url(https://giuseart.com/wp-content/uploads/2022/11/messenger.png);
+    background-color: #e60f1e;
+}
+.echbay-sms-messenger div {
+    margin: 14px 0;
+    background: #0084FF center no-repeat;
+    background-size: 70%;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px #888;
+}
+ 
+.echbay-sms-messenger {
+    text-align: center;
+    right:20px;
+    position: fixed;
+    bottom: 20px;
+    z-index: 999;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Áp dụng animation cho tất cả các nút */
+.echbay-sms-messenger div {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0; /* Bắt đầu với trạng thái ẩn */
+    visibility: hidden;
+}
+
+/* Hiển thị các nút khi hover và bắt đầu animation */
+.echbay-sms-messenger:hover div {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Luôn hiển thị Messenger và áp dụng animation khi trang tải */
+.echbay-sms-messenger div.phonering-alo-messenger {
+    opacity: 1;
+    visibility: visible;
+    animation-delay: 0.3s; /* Thêm một chút trễ để hiệu ứng rõ ràng hơn */
+}
+
+
+#header{
+    display: flex;
+    flex-direction: column; 
+}
+.logo{
+    max-width: 137px;
+    height: auto;
+    margin: 0 auto;
+}
+.navbar{
+    display: flex;
+    justify-content: right;
+    position: relative;
+    height: 25.99px;
+    width: 100%;
+}
+.navbar .tag{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 800px;
+    margin: 2px auto;
+}
+.navbar .tag a{
+    margin: 2px 18px;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--color-main);
+    font-weight: 450;
+}
+/* Hover effect for links */
+.navbar .tag a:hover {
+    background-color: #42210b;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+.tim-kiem{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;  /*khoảng cách với "tài khoản"*/
+}
+.tim-kiem input{
+    width: 160px;
+    height: 20px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(66, 33, 11, 0.11);
+    color: #B0B0B0;
+}
+.tim-kiem .logo-search{
+    padding: 5px;
+    margin-left: 7px;
+}
+#header .tai-khoan{
+    display: flex;
+    align-items: center;
+    
+    margin: 0 25px;
+    margin-right: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+#header .tai-khoan .user{
+    padding: 5px;
+    margin-right: 7px;
+}
+.tai-khoan .fa-user, .tai-khoan .fa-unlock-alt {
+    color: #333;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.tai-khoan a {
+    color: #333;
+    text-decoration: none;
+}
+.tai-khoan .account-ct,.tai-khoan .account-logout {
+    list-style: none;
+    padding: 0;
+    position: absolute; /* Positioning the dropdown */
+    left: 20px;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+
+    width: 120px;
+}
+.tai-khoan .account-ct li,.tai-khoan .account-logout li {
+    margin-left: 5px;
+}
+.tai-khoan .account-ct li,.tai-khoan .account-logout li i{
+    margin-right: 5px;
+}
+.tai-khoan:hover .account-ct, .tai-khoan:hover .account-logout {
+    display: block; /* Show on hover */
+    cursor: pointer;
+}
+
+/* Responsive design adjustments */
+@media (min-width: 768px) {
+    .hidden-sm, .hidden-xs {
+        display: block;
+    }
+    .hidden-lg, .hidden-md {
+        display: none;
+    }
+}
+
+
+#header .banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .banner img{
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 5px;
+    object-fit: cover; 
+}
+.banner i{
+    position: absolute;
+    color: rgba(205, 191, 191, 0.839);
+    font-size: 26px;
+}
+.banner .fa-caret-left{
+    left: 40px;
+}
+.banner .fa-caret-right{
+    right: 40px;
+}
+#prev-slide,
+#next-slide {
+  opacity: 0; /* Ẩn mặc định */
+  transition: opacity 0.5s ease; /* Thêm hiệu ứng chuyển động */
+  
+}
+.banner:hover #prev-slide,
+.banner:hover #next-slide {
+  opacity: 1; /* Hiển thị khi di chuột vào banner */
+}
+
+
+
+
+
+
+
+.section-promotion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-promotion .content{
+    display: flex;
+    align-items: center;
+    margin: 0px 250px;
+}
+.section-promotion .banner{
+    width: 600px;
+    padding: 50px 0px;
+}
+.section-promotion .images{
+    width: 660px;
+    margin-right: 120px;
+}
+.content-right{
+    color: var(--color-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 450;
+}
+.content-right h1{
+    font-size: 30px;
+}
+.content-right p{
+    font-size: 15px;
+    margin-top: 35px;
+}
+.btn-main{
+    color: white;
+    background-color: var(--color-main);
+    padding: 14px 26px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 90px;
+}
+
+.our-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+.our-product h1{
+    font-size: 36px;
+    font-weight: 450;
+    color: var(--color-main);
+}
+.our-product .slogan{
+    font-size: 40px;
+    font-family: Taken by Vultures Alternates De;
+    font-weight: 400;
+    background: rgba(228, 227, 227, 0.46);
+    height: 90px;
+    width: 1310px;
+    text-align: center;
+    padding: 20px 0;
+}
+.list-product{
+    display: inline-flex;
+    justify-content: space-around;
+    width: 1318px;
+}
+.list-product li{
+    width: 321px;
+    height: 465px;
+    list-style: none;
+}
+.list-product li img{
+    width: 100%;
+    height: 100%;
+}
+.list-product .item{
+    position: relative;   /*làm mốc*/
+}
+.list-product .detail ,.list-product .prices{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   width: 100%;
+   color: white;
+}
+.list-product .prices p{
+    font-size: 24px;
+ }
+.list-product .detail{
+    flex-direction: column;
+    bottom: 100px;
+}
+.detail .name-product{
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.list-product .prices{
+    bottom: 20px;
+}
+.prices .left, .prices .right{
+    text-align: center;
+    margin: 5px 60px;
+    font-size: 22px;
+}
+.item .blurry{
+    position: absolute;
+    display: flex;
+    height: 180px;
+    width: 100%;
+    background: rgba(107, 105, 104, 0.518);
+    bottom: 0;
+}
+
+footer{
+    width: 100%;
+    height: 550px;
+    background-color: var(--color-main);
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+    position: relative;
+}
+footer .center{
+    position: absolute;
+    left: 37.5%;
+    display: flex;
+    justify-content: space-between;
+    width: 430px;     /**/
+}
+
+.logo-dark{
+    font-size: 62px;
+    font-family: Taken by Vultures Alternates De;
+    position: absolute;/**/
+    top: -100px;
+    width: 412px;
+    text-align: center;
+    color: white;
+}
+.main-content{
+    text-align: center;
+    margin: auto 10px;
+}
+.main-content .top, .main-content .bottom{
+    padding: 40px;
+    color: white;
+}
+.top .sign{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.main-content .bottom{
+    color: #e2d4cb;
+}
+footer .right{
+    color: white;
+    margin-right: 115px;
+    text-align: center;
+}
+.right .local{
+    margin: 30px 0;
+}
+.right .local i{
+    font-size: 14px;
+    padding: 4px;
+}
+.right h3{
+    font-size: 16px;
+    font-weight: 450;
+    margin-bottom: 10px;
+}
+.right p{
+    font-size: 14px;
+    font-weight: 450;
+    padding: 1px 0;
+}
+
+footer .left{
+    display: flex;
+    align-items: center;
+    color: white;
+    
+}
+.left .time-oppen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+    font-weight: 450;
+}
+.time-oppen h3{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.time-oppen p{
+    font-size: 14px;
+}
+.left .social{
+    margin-left: 40px;
+    font-size: 16px;
+}
+.social div{
+    padding: 2px 0;
+}
+.social img{
+    width: 120px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.social .icon{
+    font-size: 12px;
+    padding: 5px;
+}
+.license{
+    font-size: 12px;
+    color: #D1D1D1;
+    position: absolute;
+    bottom: 10px;
+    left: 42%;
+    display: flex;
+    
+}
+.license a{
+    padding-left: 6px;
+    color: #D1D1D1;
+    font-size: 12px;
+}
+
+
+button{
+    cursor: pointer;
+}

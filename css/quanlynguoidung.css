@@ -1,0 +1,375 @@
+@font-face {
+    font-family: SVN-Futura;
+    src: url(/assets/font/SVN-Futura\ Regular.ttf);
+}         
+@font-face {
+    font-family: Taken by Vultures Alternates De;
+    src: url(/assets/font/Taken\ by\ Vultures\ Demo.otf);
+}
+:root{
+    --color-main: #42210B;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+    font-family: 'SVN-Futura', sans-serif;
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+
+    display: flex;
+}
+nav{
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: #E5E5E5 solid 1px;
+    background-color: #e9e7e747;
+}
+.logo{
+    margin: 54px 104px;
+}
+nav .top{
+    margin-bottom: 100px;
+}
+li#item{
+    height: 75px;
+    color: var(--main, #42210B);
+    font-family: SVN-Futura;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 13px;
+}
+li#item.click{
+    background-color: #4c260b1a;
+}
+svg.icon{
+    margin: 10px;
+    max-width: 25px;
+    margin-left: 25px;
+}
+main{
+    margin-left: 85px;
+}
+.nav-top{
+    width: 1500px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.nav-top .gr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-top p{
+    color: var(--color-main, #000);
+    font-family: SVN-Futura;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    margin-bottom: 4px;
+}
+.nav-top svg{
+    width: 16px;
+    margin: 10px;
+}
+.nav-top .combobox{
+    height: 44px;
+    margin-right: 94px;
+    border-radius: 8px;
+}
+.nav-top .timkiem{
+    width: 801px;
+    height: 44px;
+    margin-right: 83px;
+    border-radius: 8px;
+    background: rgb(234, 232, 230);
+}
+.nav-top .timkiem input{
+    width: 750px;
+    height: 35px;
+    border: none;
+    background: rgb(234, 232, 230);
+}
+.nav-top .reset{
+    width: 120px;
+    height: 44px;
+    margin-right: 0;
+    border-radius: 8px;
+    background: rgb(234, 232, 230);
+}
+
+main .container{
+    height: 41px;
+    width: 1476px;
+    text-align: center;
+}
+main ul{
+    list-style: none;
+    display: flex;
+    height: 41px;
+    color: var(--color-main, #000);
+    font-family: SVN-Futura;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+}
+main ul p{
+    
+}
+main ul .id, main ul .hoten, main ul .email, main ul .quyen{
+    white-space: nowrap; /* Đảm bảo rằng văn bản không chuyển xuống dòng mới */
+    overflow: hidden; /* Ẩn các nội dung vượt quá khu vực hiển thị */
+    text-overflow: ellipsis; /* Thêm dấu ba chấm khi nội dung bị cắt giảm */
+}
+main ul .id{
+    width: 170px;
+    border-radius: 5px;
+    background: rgb(234, 232, 230);
+    margin: 0 2px;
+}
+main ul .hoten{
+    width: 380px;
+    border-radius: 5px;
+    background: rgb(234, 232, 230);
+    margin: 0 2px;
+}
+main ul .email{
+    width: 430px;
+    border-radius: 5px;
+    background: rgb(234, 232, 230);
+    margin: 0 2px;
+}
+main ul .quyen{
+    width: 250px;
+    border-radius: 5px;
+    background: rgb(234, 232, 230);
+    margin: 0 2px;
+}
+main ul .tacvu{
+    width: 230px;
+    border-radius: 5px;
+    background: rgb(234, 232, 230);
+    margin: 0 2px;
+}
+
+main ul.title{
+    margin-top: 43px;
+    padding-top: 10px;
+}
+main ul.content{
+    margin-top: 8px;
+    flex-direction: column;
+}
+main .content li{
+    margin-top: 8px;
+    
+}
+main ul.content .id{
+    background-color: white;
+    border: #42210B 1px solid;
+}
+main ul.content .hoten{
+    background-color: white;
+    border: #42210B 1px solid;
+}
+main ul.content .email{
+    background-color: white;
+    border: #42210B 1px solid;
+}
+main ul.content .quyen{
+    background-color: white;
+    border: #42210B 1px solid;
+}
+main ul.content .tacvu{
+    background-color: white;
+    border: #42210B 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#edit, #remove{
+    padding-top: 5px;
+}
+main ul.content .tacvu svg{
+    width: 45px;
+    height: 25px;
+    background-color: #e7e4e4d2;
+    border-radius: 8px;
+    padding: 6px;
+}
+#pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 600px;
+}
+#pagination a{
+    color:var(--color-main);
+    margin: 0 12px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+
+/* Style for the popup container */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the popup content */
+.popup-content {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+
+    border-radius: 18px;
+    width: 685px;
+    margin-top: 200px;
+    margin-left: 640px;
+}
+.popup-content .close{
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 90px;
+    font-weight: 600;
+}
+.popup-content .title {
+    background: #644937;
+    width: 685px;
+    height: 51px;
+    color: white;
+    font-size: 24px;
+    font-weight: 450;
+    line-height: normal;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    text-align: center;
+}
+.popup-content .title p{
+    padding: 10px 0;
+}
+.popup-content .detail {
+    background-color: #FFF;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+
+    width: 685px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 150px;
+}
+.gr1{
+    margin-top: 20px;
+    display: block;
+}
+.gr1 input{
+    width: 404px;
+    height: 38px;
+    margin-top: 5px;
+}
+.gr1 select{
+    width: 100px;
+    height: 38px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600px;
+    color: var(--color-main);
+}
+.gr1 label{
+    color: var(--color-main, #000);
+    text-align: center;
+    font-family: SVN-Futura;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+}
+.btn-luu{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.btn-luu button{
+    width: 190px;
+    height: 45px;
+    background-color: #644937;
+    border-style: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+}
+.btn-luu svg{
+    color: black;
+    fill: #FFF;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Style for the close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+#popupUserEmail, #popupUserFullname{
+    font-size: 20px;
+    color: var(--color-main);
+    padding: 0 5px;
+}
+#tatca, #lammoi{
+    cursor:  pointer;
+}
+#tatca{
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    background-color: rgb(234, 232, 230);
+    height: 43px;
+    width: 140px;
+    font-family: SVN-Futura;
+    border-radius: 8px;
+}
+.timkiem svg{
+    cursor: pointer;
+    margin: 0 20px;
+}
+.timkiem input{
+    padding: 0 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-family: SVN-Futura;
+    
+}

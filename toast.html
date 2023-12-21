@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/toast.css">
+</head>
+<body>
+    <!-- Phần tử toast -->
+    <div id="toast" class="hidden">
+        Đăng nhập thành công!
+    </div>
+
+    <!-- Đoạn mã JavaScript -->
+    <script>
+        // Hàm hiển thị toast
+        function showToast() {
+            const toast = document.getElementById("toast");
+            toast.classList.remove("hidden");
+
+            // Tự động ẩn toast sau 3 giây
+            setTimeout(function() {
+                toast.classList.add("hidden");
+            }, 3000);
+        }
+
+        // Mô phỏng đăng nhập thành công
+        function simulateSuccessfulLogin() {
+            // Thực hiện kiểm tra đăng nhập (ở đây là ví dụ đơn giản)
+            const loggedIn = true;
+
+            if (loggedIn) {
+                showToast();
+            }
+        }
+
+        // Gọi hàm simulateSuccessfulLogin() khi đăng nhập
+        simulateSuccessfulLogin();
+    </script>
+</body>
+</html>
